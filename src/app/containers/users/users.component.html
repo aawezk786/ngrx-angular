@@ -1,0 +1,5 @@
+<div fxLayout="column" fxLayoutGap="30px" fxLayoutAlign="start center">
+    <app-user-list [users]="this.users"></app-user-list>
+    <mat-spinner *ngIf="this.loading"></mat-spinner>
+      <app-error (reload)="this.tryAgain()" *ngIf="this.error && !loading"></app-error>
+</div>
